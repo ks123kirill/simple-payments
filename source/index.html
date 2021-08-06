@@ -115,31 +115,77 @@
         </div>
       </section>
 
-      <section class="page-main__news news">
-        <h2 class="visually-hidden">Новости</h2>
-        <ul class="news__list">
-          <li class="news__item">
-            <a class="news__link" href="#">
-                <h3 class="news__title">Жилье россиян в пандемию стали реже принудительно продавать за долги</h3>
-                <p class="news__text">В 2020 году судебные приставы в интересах кредиторов выставили на торги на 14,1% меньше квартир, чем годом ранее.</p>
-            </a>
-          </li>
+      <section class="news">
 
-          <li class="news__item">
-            <a class="news__link" href="#">
-                <h3 class="news__title">Число невыездных из-за долгов россиян выросло на 20% за год</h3>
-                <p class="news__text">Более 4 млн россиян не могут покинуть страну из-за долгов. За год таких граждан стало больше примерно на 700 тыс.</p>
-            </a>
-          </li>
+        <div class="news__wrapper slider">
+          <h2 class="visually-hidden">Новости</h2>
+          <a class="button button--special news__link-all" href="#">Все новости</a>
 
-          <li class="news__item">
-            <a class="news__link" href="#">
-                <h3 class="news__title">Компания Филиппа Киркорова задолжала налоговой ₽95 тыс.</h3>
-                <p class="news__text">ООО «Филипп Киркоров Продакшн» задолжало Федеральной налоговой службе 95 тыс. 605 руб. </p>
-            </a>
-          </li>
-        </ul>
-        <a class="news__link-all" href="#">Все новости</a>
+          <ul class="news__list">
+            <li class="news__item">
+              <a class="news__link" href="#">
+                  <h3 class="news__title">Жилье россиян в пандемию стали реже принудительно продавать за долги</h3>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 800px)" srcset="img/news01-mobile.webp 1x, img/news01-mobile@2x.webp 2x">
+
+                    <source media="(max-width: 800px)" srcset="img/news01-mobile.jpg 1x, img/news01-mobile@2x.jpg 2x">
+                    <img class="news__img" src="img/news01-desktop.jpg" srcset="img/news01-desktop@2x.jpg 2x" width="360" height="150" alt="Изображение новости">
+                  </picture>
+
+                  <p class="news__preview">В 2020 году судебные приставы в интересах кредиторов выставили на торги на 14,1% меньше квартир, чем годом ранее.</p>
+              </a>
+            </li>
+
+            <li class="news__item">
+              <a class="news__link" href="#">
+                  <h3 class="news__title">Число невыездных из-за долгов россиян выросло на 20% за год</h3>
+
+                  <picture>
+                    <source type="image/webp" media="(max-width: 800px)" srcset="img/news02-mobile.webp 1x, img/news02-mobile@2x.webp 2x">
+
+                    <source media="(max-width: 800px)" srcset="img/news02-mobile.jpg 1x, img/news02-mobile@2x.jpg 2x">
+                    <img class="news__img" src="img/news02-desktop.jpg" srcset="img/news02-desktop@2x.jpg 2x" width="360" height="150" alt="Изображение новости">
+                  </picture>
+
+                  <p class="news__preview">Более 4 млн россиян не могут покинуть страну из-за долгов. За год таких граждан стало больше примерно на 700 тыс.</p>
+              </a>
+            </li>
+
+            <li class="news__item">
+              <a class="news__link" href="#">
+                  <h3 class="news__title">Компания Филиппа Киркорова задолжала налоговой ₽95 тыс.</h3>
+
+                  <picture>
+                    <source type="image/webp" media="(max-width: 800px)" srcset="img/news03-mobile.webp 1x, img/news03-mobile@2x.webp 2x">
+
+                    <source media="(max-width: 800px)" srcset="img/news03-mobile.jpg 1x, img/news03-mobile@2x.jpg 2x">
+                    <img class="news__img" src="img/news03-desktop.jpg" srcset="img/news03-desktop@2x.jpg 2x" width="360" height="150" alt="Изображение новости">
+                  </picture>
+
+                  <p class="news__preview">ООО «Филипп Киркоров Продакшн» задолжало Федеральной налоговой службе 95 тыс. 605 руб. </p>
+              </a>
+            </li>
+          </ul>
+
+          <button class="button slider__direction slider__direction--prev" type="button" aria-label="Предыдущая новость">
+            <svg width="35" height="35" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <button class="button slider__direction slider__direction--next" type="button" aria-label="Следующая новость">
+            <svg width="35" height="35" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <p class="slider__toggles news__toggles">
+            <button class="button slider__toggle slider__toggle--current" type="button" aria-label="Первая новость"></button>
+            <button class="button slider__toggle" type="button" aria-label="Вторая новость"></button>
+            <button class="button slider__toggle" type="button" aria-label="Третья новость"></button>
+            <button class="button slider__toggle" type="button" aria-label="Четвертая новость"></button>
+          </p>
+        </div>
       </section>
 
       <section class="articles-block">
