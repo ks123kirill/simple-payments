@@ -1,0 +1,76 @@
+.advantages__list {
+  list-style: none;
+  text-align: left;
+  padding: 0 0 0 0;
+}
+
+.advantages__item {
+  position: relative;
+  min-height: 152px;
+  box-shadow: 0 1px 10px var(--special-black-lighten);
+  box-sizing: border-box;
+  padding: 10px 16px 0 90px;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 15px;
+    width: 63px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:nth-child(1)::before {
+    height: 65px;
+    background-image: url("../img/icon-eagle.png");
+  }
+
+  &:nth-child(2)::before {
+    width: 72px;
+    height: 63px;
+    background-image: url("../img/icon-debt-paid.png");
+  }
+
+  &:nth-child(3)::before {
+    height: 51px;
+    background-image: url("../img/icon-safety.png");
+  }
+
+  &:nth-child(4)::before {
+    height: 63px;
+    background-image: url("../img/icon-receipt.png");
+  }
+}
+
+.advantages__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-black-whiten);
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+
+.advantages__text {
+  .text-small;
+  color: var(--basic-black-whiten);
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: @desktop-width - 1px) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .advantages__item {
+    width: 400px;
+    margin-right: 20px;
+  }
+}
+///////////////

@@ -1,0 +1,56 @@
+.debt-check {
+  padding: 0 0 20px 0;
+}
+
+.debt-check__wrapper {
+  box-shadow: 0 2px 5px var(--special-black-lighten);
+  border-radius: 10px;
+}
+
+.debt-check__title {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 25px;
+  text-align: left;
+  padding: 0 0 20px 0;
+}
+
+.debt-check__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--basic-grey);
+  padding-right: 20px;
+}
+
+.debt-check__button {
+  flex-basis: content;
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--special-grey-lighten);
+  background-color: var(--basic-grey);
+  padding: 10px 10px;
+
+  // &--administrative-case {
+  //   margin-left: auto;
+  // }
+
+  &--active {
+    color: var(--basic-black-lighten);
+    background-color: var(--basic-white);
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    color: var(--basic-black);
+    background-color: var(--basic-grey-lighen);
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.5;
+  }
+}
+
+//////////

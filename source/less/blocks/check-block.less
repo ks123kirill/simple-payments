@@ -1,0 +1,42 @@
+.check-block {
+  max-width: @desktop-width;
+  display: grid;
+  grid-template-columns: 858px 300px;
+  grid-template-rows: min-content min-content;
+  column-gap: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 30px 40px 30px;
+  outline: 5px dotted orange;
+  outline-offset: -5px;
+}
+
+.check-block__debt {
+  grid-row: ~"1/2";
+  grid-column: ~"1/2";
+  // outline: 5px dotted yellowgreen;
+  // outline-offset: -5px;
+}
+
+.check-block__advantages {
+  grid-row: ~"1/-1";
+  grid-column: ~"2/-1";
+  outline: 5px dotted yellowgreen;
+  outline-offset: -5px;
+}
+
+.check-block__app {
+  grid-row: ~"2/-1";
+  grid-column: ~"1/2";
+  // outline: 5px dotted yellowgreen;
+  // outline-offset: -5px;
+}
+
+@media (max-width: @desktop-width - 1px) {
+  .check-block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/////////////
+

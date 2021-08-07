@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 40px 43px 40px 20px;
+  box-sizing: border-box;
+  // outline: 3px solid rebeccapurple;
+  // outline-offset: -3px;
+}
+
+.form__input {
+  height: 64px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--basic-black-lighten);
+  background-color: var(--basic-white);
+  border: 1px solid var(--special-grey-lighten);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: var(--special-black-medium);
+  }
+
+  &--name,
+  &--select {
+    width: 460px;
+    margin-right: 20px;
+  }
+
+  &--birthday {
+    flex-basis: 304px;
+  }
+}
+
+.form__button {
+  width: 304px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 24px;
+  height: 64px;
+  border-radius: 8px;
+}
