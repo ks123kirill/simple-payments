@@ -31,34 +31,57 @@
     </header>
 
     <main class="page-main">
-      <section class="check-block">
-        <div class="check-block__debt debt-check">
-          <h2 class="debt-check__title">Проверить задолженность у судебных приставов</h2>
+      <section class="test-block">
+        <div class="test-block__check check check--no-js">
+          <h2 class="check__title">Проверить задолженность у судебных приставов</h2>
 
-          <div class="debt-check__wrapper">
-            <div class="debt-check__buttons">
-              <button class="debt-check__button debt-check__button--active button debt-check__button--individual" type="button" disabled>Физическое лицо</button>
-              <button class="debt-check__button button debt-check__button--entity" type="button">Юридическое лицо</button>
-              <button class="debt-check__button button debt-check__button--enforcement-proceeding" type="button">Номер ИП</button>
-              <button class="debt-check__button button debt-check__button--administrative-case" type="button">Номер ИД</button>
+          <div class="check__wrapper">
+            <div class="check__buttons">
+              <button class="check__button button check__button--individual check__button--active" type="button" disabled>Физическое лицо</button>
+              <button class="check__button button check__button--entity" type="button">Юридическое лицо</button>
+              <button class="check__button button check__button--enforcement-proceeding" type="button">Номер ИП</button>
+              <button class="check__button button check__button--administrative-case" type="button">Номер ИД</button>
             </div>
 
-            <form class="debt-check__form form form--individual" action="https://echo.htmlacademy.ru" method="POST">
-
-              <label class="visually-hidden" aria-label="Тип запроса">
-                <input name="type" type="text" value="individual" readonly>
-              </label>
-
-              <div>
-                <label aria-label="Фамилия имя отчество">
-                  <input class="form__input form__input--name" name="name" type="text" placeholder="Иванов Иван Иванович" required>
-                </label>
-
-                <label aria-label="День рождения">
-                  <input class="form__input form__input--birthday" name="birthday" type="date" required>
-                </label>
+            <form class="check__form form form--individual form--active" action="https://echo.htmlacademy.ru" method="POST">
+              <button class="check__type button form__button-opened form__button-opened--individual" type="button" disabled>Физическое лицо</button>
+              <input class="visually-hidden" name="type" type="text" value="individual" readonly>
+              <div class="form__block1">
+                  <input class="form__input form__input--name1" name="name" type="text" placeholder="Иванов Иван Иванович" aria-label="Фамилия имя отчество" required>
+                  <input class="form__input form__input--name2" name="birthday" type="date" aria-label="Дата рождения" required>
               </div>
+              <div class="form__block2">
+                <select class="form__input form__input--select" name="regions">
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Default" selected>Все регионы</option>
+                </select>
+                <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+              </div>
+            </form>
 
+            <form class="check__form form form--entity" action="https://echo.htmlacademy.ru" method="POST">
+              <button class="check__type button form__button-opened form__button-opened--entity" type="button" disabled>Юридическое лицо</button>
+              <input class="visually-hidden" name="type" type="text" value="entity" readonly>
+              <div class="form__block1">
+                <input class="form__input form__input--name1" name="organization" type="text" placeholder="Наименование предприятия-должника" aria-label="Наименование предприятия-должника" required>
+                <input class="form__input form__input--name2" name="address" type="text" placeholder="Адрес предприятия-должника" aria-label="Адрес предприятия-должника" required>
+            </div>
+            <div class="form__block2">
               <select class="form__input form__input--select" name="regions">
                 <option value="Republic of Adygea">Республика Адыгея</option>
                 <option value="Altai Republic">Республика Алтай</option>
@@ -78,24 +101,55 @@
                 <option value="Republic of Kalmykia">Республика Калмыкия</option>
                 <option value="Default" selected>Все регионы</option>
               </select>
-              <button class="button button--submit form__button" type="submit">Проверить задолженности</button>
+              <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+            </div>
             </form>
 
-            <form class="form form--entity visually-hidden" action="TestPage.html" method="POST">
-              <h3 class="form__title">Юридическое лицо</h3>
+            <form class="check__form form form--enforcement-proceeding" action="https://echo.htmlacademy.ru" method="POST">
+              <button class="check__type button form__button-opened form__button-opened--enforcement-proceeding" type="button" disabled>Номер ИП</button>
+              <input class="visually-hidden" name="type" type="text" value="enforcement-proceeding" readonly >
+              <div class="form__block1">
+                <input class="form__input form__input--name2" name="Number" type="text" placeholder="Номер исполнительного производства" aria-label="Номер исполнительного производства" required>
+              </div>
+              <div class="form__block2">
+                <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+              </div>
             </form>
 
-            <form class="form form--enforcement-proceeding visually-hidden" action="TestPage.html" method="POST">
-              <h3 class="form__title">Номер ИП</h3>
-            </form>
-
-            <form class="form form--administrative-case visually-hidden" action="TestPage.html" method="POST">
-              <h3 class="form__title">Номер ИД</h3>
+            <form class="check__form form form--administrative-case" action="https://echo.htmlacademy.ru" method="POST">
+              <button class="check__type button form__button-opened form__button-opened--administrative-case" type="button" disabled>Номер ИД</button>
+              <input class="visually-hidden" name="type" type="text" value="administrative-case" readonly >
+              <div class="form__block1">
+                <input class="form__input form__input--name1" name="Number" type="text" placeholder="Номер исполнительного документа" aria-label="Номер исполнительного документа" required>
+                <input class="form__input form__input--name2" name="type" type="text" placeholder="Тип документа" aria-label="Тип исполнительного документа" required>
+            </div>
+            <div class="form__block2">
+              <select class="form__input form__input--select" name="regions">
+                <option value="Republic of Adygea">Республика Адыгея</option>
+                <option value="Altai Republic">Республика Алтай</option>
+                <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                <option value="Republic of Buryatia">Республика Бурятия</option>
+                <option value="Republic of Dagestan">Республика Дагестан</option>
+                <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                <option value="Republic of Adygea">Республика Адыгея</option>
+                <option value="Altai Republic">Республика Алтай</option>
+                <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                <option value="Republic of Buryatia">Республика Бурятия</option>
+                <option value="Republic of Dagestan">Республика Дагестан</option>
+                <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                <option value="Default" selected>Все регионы</option>
+              </select>
+              <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+            </div>
             </form>
           </div>
         </div>
 
-        <div class="check-block__advantages advantages">
+        <div class="test-block__advantages advantages">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -120,7 +174,7 @@
           </ul>
         </div>
 
-        <div class="check-block__app app">
+        <div class="test-block__app app">
           <h2 class="visually-hidden">Ссылка на приложение "Простые платежи"</h2>
           <p class="app__title">ФССП России - проверка и оплата</p>
           <p class="app__text">Приложение</p>

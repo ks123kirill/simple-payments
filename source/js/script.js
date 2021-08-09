@@ -1,32 +1,21 @@
-// let getActiveForm =  function () {
-//   const debtCheckButtons = document.querySelector('.debt-check__buttons');
-//   const buttonIndividual = debtCheckButtons.querySelector('.debt-check__button--individual');
-//   const buttonEntity = debtCheckButtons.querySelector('.debt-check__button--entity');
-//   const buttonEnforcementProceeding = debtCheckButtons.querySelector('.debt-check__button--enforcement-proceeding');
-//   const buttonAdministrativeCase = debtCheckButtons.querySelector('.debt-check__button--administrative-case');
+const isJS = function () {
+  const check = document.querySelector('.check');
+  const checkForms = check.querySelectorAll('.check__form');
 
-//   debtCheckButtons.addEventListener('click', function(evt) {
-//     console.log(evt.target);
-//     let buttonTarget = evt.target;
-//     buttonTarget.classList.add('debt-check__button--active');
-//   })
+  check.classList.remove('check--no-js');
 
-// }
+  for (let i = 1; i < checkForms.length; i++) {
+    // i = 1, что бы исключить первый .form
+    checkForms[i].classList.add('check__form--closed');
+  }
+}
 
-// getActiveForm();
+// const getActiveFormDesktop =  function () {}
+// const getActiveFormMobile =  function () {}
 
-// let getActiveForm =  function () {
-//   const debtCheckButtons = document.querySelector('.debt-check__buttons');
-//   const checkButtons = debtCheckButtons.querySelectorAll('.debt-check__button');
-
-//   // console.log(checkButtons);
-//   checkButtons.forEach((item) = () => {
-//     console.log(item);
-//   });
-// }
-
-// getActiveForm();
-
+isJS();
+// getActiveFormDesktop();
+// getActiveFormMobile();
 
 
 //////////

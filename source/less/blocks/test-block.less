@@ -1,4 +1,4 @@
-.check-block {
+.test-block {
   max-width: @desktop-width;
   display: grid;
   grid-template-columns: 858px 300px;
@@ -11,21 +11,21 @@
   outline-offset: -5px;
 }
 
-.check-block__debt {
+.test-block__check {
   grid-row: ~"1/2";
   grid-column: ~"1/2";
   // outline: 5px dotted yellowgreen;
   // outline-offset: -5px;
 }
 
-.check-block__advantages {
+.test-block__advantages {
   grid-row: ~"1/-1";
   grid-column: ~"2/-1";
   outline: 5px dotted yellowgreen;
   outline-offset: -5px;
 }
 
-.check-block__app {
+.test-block__app {
   grid-row: ~"2/-1";
   grid-column: ~"1/2";
   // outline: 5px dotted yellowgreen;
@@ -33,7 +33,7 @@
 }
 
 @media (max-width: @desktop-width - 1px) {
-  .check-block {
+  .test-block {
     display: flex;
     flex-direction: column;
   }
