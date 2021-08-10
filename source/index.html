@@ -37,14 +37,14 @@
 
           <div class="check__wrapper">
             <div class="check__buttons">
-              <button class="check__button button check__button--individual check__button--active" type="button" disabled>Физическое лицо</button>
+              <button class="check__button button check__button--individual check__button--active" type="button">Физическое лицо</button>
               <button class="check__button button check__button--entity" type="button">Юридическое лицо</button>
               <button class="check__button button check__button--enforcement-proceeding" type="button">Номер ИП</button>
               <button class="check__button button check__button--administrative-case" type="button">Номер ИД</button>
             </div>
 
             <form class="check__form form form--individual form--active" action="https://echo.htmlacademy.ru" method="POST">
-              <button class="check__type button form__button-opened form__button-opened--individual" type="button" disabled>Физическое лицо</button>
+              <button class="check__type button form__button form__button--individual" type="button">Физическое лицо</button>
               <input class="visually-hidden" name="type" type="text" value="individual" readonly>
               <div class="form__block1">
                   <input class="form__input form__input--name1" name="name" type="text" placeholder="Иванов Иван Иванович" aria-label="Фамилия имя отчество" required>
@@ -75,7 +75,7 @@
             </form>
 
             <form class="check__form form form--entity" action="https://echo.htmlacademy.ru" method="POST">
-              <button class="check__type button form__button-opened form__button-opened--entity" type="button" disabled>Юридическое лицо</button>
+              <button class="check__type button form__button form__button--entity" type="button">Юридическое лицо</button>
               <input class="visually-hidden" name="type" type="text" value="entity" readonly>
               <div class="form__block1">
                 <input class="form__input form__input--name1" name="organization" type="text" placeholder="Наименование предприятия-должника" aria-label="Наименование предприятия-должника" required>
@@ -106,7 +106,7 @@
             </form>
 
             <form class="check__form form form--enforcement-proceeding" action="https://echo.htmlacademy.ru" method="POST">
-              <button class="check__type button form__button-opened form__button-opened--enforcement-proceeding" type="button" disabled>Номер ИП</button>
+              <button class="check__type button form__button form__button--enforcement-proceeding" type="button">Номер ИП</button>
               <input class="visually-hidden" name="type" type="text" value="enforcement-proceeding" readonly >
               <div class="form__block1">
                 <input class="form__input form__input--name2" name="Number" type="text" placeholder="Номер исполнительного производства" aria-label="Номер исполнительного производства" required>
@@ -117,7 +117,7 @@
             </form>
 
             <form class="check__form form form--administrative-case" action="https://echo.htmlacademy.ru" method="POST">
-              <button class="check__type button form__button-opened form__button-opened--administrative-case" type="button" disabled>Номер ИД</button>
+              <button class="check__type button form__button form__button--administrative-case" type="button">Номер ИД</button>
               <input class="visually-hidden" name="type" type="text" value="administrative-case" readonly >
               <div class="form__block1">
                 <input class="form__input form__input--name1" name="Number" type="text" placeholder="Номер исполнительного документа" aria-label="Номер исполнительного документа" required>
