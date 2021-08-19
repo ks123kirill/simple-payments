@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Простые платежи</title>
-    <link rel="preload" href="fonts/SourceSansPro-Regular.woff2" as="font">
+    <!-- <link rel="preload" href="fonts/SourceSansPro-Regular.woff2" as="font">
     <link rel="preload" href="fonts/SourceSansPro-SemiBold.woff2" as="font">
     <link rel="preload" href="fonts/SourceSansPro-Bold.woff2" as="font">
     <link rel="preload" href="fonts/SourceSansPro-Black.woff2" as="font">
-    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="css/style.min.css" as="style"> -->
     <link href="css/style.min.css" rel="stylesheet">
 
   </head>
@@ -31,84 +31,180 @@
     </header>
 
     <main class="page-main">
-      <section class="page-main__check check-block">
-        <div class="check-block__debt debt-check">
-          <h2 class="debt-check__title">Проверить задолженность у судебных приставов</h2>
+      <section class="test-block">
+        <div class="test-block__check check">
+          <h2 class="check__title">Проверить задолженность у судебных приставов</h2>
 
-          <form class="form form--individual" action="TestPage.html" method="POST">
-            <h3 class="form__title">Физическое лицо</h3>
-            <label aria-label="Фамилия имя отчество ">
-              <input class="form__input" type="text" placeholder="Иванов Иван Иванович" required>
-            </label>
-            <label>
-              <input class="form__input" type="date" required>
-            </label>
-            <select class="form__select" name="regions">
-              <option value="Republic of Adygea">Республика Адыгея</option>
-              <option value="Altai Republic">Республика Алтай</option>
-              <option value="Republic of Bashkortostan">Республика Башкортостан</option>
-              <option value="Republic of Buryatia">Республика Бурятия</option>
-              <option value="Republic of Dagestan">Республика Дагестан</option>
-              <option value="Republic of Ingushetia">Республика Ингушетия</option>
-              <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
-              <option value="Republic of Kalmykia">Республика Калмыкия</option>
-              <option value="Republic of Adygea">Республика Адыгея</option>
-              <option value="Altai Republic">Республика Алтай</option>
-              <option value="Republic of Bashkortostan">Республика Башкортостан</option>
-              <option value="Republic of Buryatia">Республика Бурятия</option>
-              <option value="Republic of Dagestan">Республика Дагестан</option>
-              <option value="Republic of Ingushetia">Республика Ингушетия</option>
-              <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
-              <option value="Republic of Kalmykia">Республика Калмыкия</option>
-              <option value="Default" selected>Все регионы</option>
-            </select>
-            <button class="button button--submit form__button" type="submit">Проверить задолженности</button>
-          </form>
-          <form class="form form--entity visually-hidden" action="TestPage.html" method="POST">
-            <h3 class="form__title">Юридическое лицо</h3>
-          </form>
-          <form class="form form--enforcement-proceeding visually-hidden" action="TestPage.html" method="POST">
-            <h3 class="form__title">Номер ИП</h3>
-          </form>
-          <form class="form form--administrative-case visually-hidden" action="TestPage.html" method="POST">
-            <h3 class="form__title">Номер ИД</h3>
-          </form>
+          <div class="check__wrapper">
+            <input class="check__button1 visually-hidden" id="check__button1" type="radio" name="check-type" checked>
+            <label class="check__label check__label--individual" for="check__button1" tabindex="0">Физическое лицо</label>
+            <input class="check__button2 visually-hidden" id="check__button2" type="radio" name="check-type">
+            <label class="check__label check__label--entity" for="check__button2" tabindex="0">Юридическое лицо</label>
+            <input class="check__button3 visually-hidden" id="check__button3" type="radio" name="check-type">
+            <label class="check__label check__label--enforcement-proceeding" for="check__button3" tabindex="0">Номер ИП</label>
+            <input class="check__button4 visually-hidden" id="check__button4" type="radio" name="check-type">
+            <label class="check__label check__label--administrative-case" for="check__button4" tabindex="0">Номер ИД</label>
+
+            <form class="check__form-individual form form--individual" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="form__label form__label--individual">Физическое лицо
+                <input class="visually-hidden" name="type" type="text" value="individual" readonly>
+              </label>
+
+              <div class="form__block1">
+                <input class="form__input form__input--name1" name="name" type="text" placeholder="Иванов Иван Иванович" aria-label="Фамилия имя отчество" required>
+                <input class="form__input form__input--name2" name="birthday" type="date" aria-label="Дата рождения" required>
+              </div>
+              <div class="form__block2">
+                <select class="form__input form__input--select" name="regions">
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Default" selected>Все регионы</option>
+                </select>
+                <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+              </div>
+            </form>
+
+            <form class="check__form-entity form form--entity" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="form__label form__label--entity">Юридическое лицо
+                <input class="visually-hidden" name="type" type="text" value="entity" readonly>
+              </label>
+
+              <div class="form__block1">
+                <input class="form__input form__input--name1" name="organization" type="text" placeholder="Наименование предприятия-должника" aria-label="Наименование предприятия-должника" required>
+                <input class="form__input form__input--name2" name="address" type="text" placeholder="Адрес предприятия-должника" aria-label="Адрес предприятия-должника" required>
+              </div>
+              <div class="form__block2">
+                <select class="form__input form__input--select" name="regions">
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Default" selected>Все регионы</option>
+                </select>
+                <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+              </div>
+            </form>
+
+            <form class="check__form-enforcement-proceeding form form--enforcement-proceeding" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="form__label form__label--enforcement-proceeding">Номер ИП
+                <input class="visually-hidden" name="type" type="text" value="enforcement-proceeding" readonly>
+              </label>
+
+              <div class="form__block1">
+                <input class="form__input form__input--name2" name="Number" type="text" placeholder="Номер исполнительного производства" aria-label="Номер исполнительного производства" required>
+              </div>
+              <div class="form__block2">
+                <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+              </div>
+            </form>
+
+            <form class="check__form-administrative-case form form--administrative-case" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="form__label form__label--administrative-case">Номер ИД
+                <input class="visually-hidden" name="type" type="text" value="administrative-case" readonly>
+              </label>
+
+              <div class="form__block1">
+                <input class="form__input form__input--name1" name="Number" type="text" placeholder="Номер исполнительного документа" aria-label="Номер исполнительного документа" required>
+                <input class="form__input form__input--name2" name="type" type="text" placeholder="Тип документа" aria-label="Тип исполнительного документа" required>
+              </div>
+              <div class="form__block2">
+                <select class="form__input form__input--select" name="regions">
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Republic of Adygea">Республика Адыгея</option>
+                  <option value="Altai Republic">Республика Алтай</option>
+                  <option value="Republic of Bashkortostan">Республика Башкортостан</option>
+                  <option value="Republic of Buryatia">Республика Бурятия</option>
+                  <option value="Republic of Dagestan">Республика Дагестан</option>
+                  <option value="Republic of Ingushetia">Республика Ингушетия</option>
+                  <option value="Kabardino-Balkar Republic">Кабардино-Балкарская Республика</option>
+                  <option value="Republic of Kalmykia">Республика Калмыкия</option>
+                  <option value="Default" selected>Все регионы</option>
+                </select>
+                <button class="button button--submit form__button-submit" type="submit">Проверить задолженности</button>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <div class="promo">
-          <h2 class="promo__heading">Преимущества</h2>
-          <ul class="promo__list">
-            <li class="promo__item">
-              <h3 class="promo__title">Официальный источник данных</h3>
-              <p class="promo__text">Сведения о задолженностях получаются из официального банка данных исполнительных производств ФССП России</p>
+        <div class="test-block__advantages advantages">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--logo">
+              <label class="advantages__label" for="official-data">
+                <span class="advantages__title">Официальный источник данных</span>
+                <input class="advantages__input" id="official-data" type="checkbox">
+                <span class="advantages__text">Сведения о задолженностях получаются из официального банка данных исполнительных производств ФССП России</span>
+              </label>
             </li>
 
-            <li class="promo__item">
-              <h3 class="promo__title">Гарантия погашения</h3>
-              <p class="promo__text">Сведения об оплате передаются в ФССП России с использованием шлюзов Федерального казначейства</p>
+            <li class="advantages__item advantages__item--paid">
+              <label class="advantages__label" for="warranty">
+                <span class="advantages__title">Гарантия погашения</span>
+                <input class="advantages__input" id="warranty" type="checkbox">
+                <span class="advantages__text">Сведения об оплате передаются в ФССП России с использованием шлюзов Федерального казначейства</span>
+              </label>
             </li>
 
-            <li class="promo__item">
-              <h3 class="promo__title">Безопасные платежи</h3>
-              <p class="promo__text">Безопасность платежей и данных банковских карт подтверждается сертификатом PCI DSS</p>
+            <li class="advantages__item advantages__item--safety">
+              <label for="safety" class="advantages__label">
+                <span class="advantages__title">Безопасные платежи</span>
+                <input class="advantages__input" id="safety" type="checkbox">
+                <span class="advantages__text">Безопасность платежей и данных банковских карт подтверждается сертификатом PCI DSS</span>
+              </label>
             </li>
 
-            <li class="promo__item">
-              <h3 class="promo__title">Квитанция об оплате</h3>
-              <p class="promo__text">Квитанция будет отправлена на указанный Вами адрес электронной почты сразу же после оплаты</p>
+            <li class="advantages__item advantages__item--receipt">
+              <label for="receipt" class="advantages__label">
+                <span class="advantages__title">Квитанция об оплате</span>
+                <input class="advantages__input" id="receipt" type="checkbox">
+                <span class="advantages__text">Квитанция будет отправлена на указанный Вами адрес электронной почты сразу же после оплаты</span>
+              </label>
             </li>
           </ul>
         </div>
 
-        <div class="app">
+        <div class="test-block__app app">
           <h2 class="visually-hidden">Ссылка на приложение "Простые платежи"</h2>
           <p class="app__title">ФССП России - проверка и оплата</p>
           <p class="app__text">Приложение</p>
 
           <ul class="app__list">
             <li class="app__item">Проверка и оплата по базе ФССП</li>
-            <li class="app__item">Квитанция об оплате всегда под рукой </li>
-            <li class="app__item">Ответы на часто задаваемые вопросы</li>
+            <li class="app__item">Квитанция об оплате всегда под<br> рукой </li>
+            <li class="app__item">Ответы на часто задаваемые<br> вопросы</li>
           </ul>
 
           <p class="app__qr-code">Наведите камеру или сканер QR-кодов</p>
@@ -321,10 +417,7 @@
         Операторами по переводу денежных средств являются НКО “Монета.ру” (лицензия ЦБ РФ №3508-К от 02 июля 2012) и ПАО “Промсвязьбанк” (лицензия ЦБ РФ №3521 от 17 декабря 2014).
         </p>
       </div>
-
     </footer>
-
     <script src="js/script.min.js"></script>
-
   </body>
 </html>

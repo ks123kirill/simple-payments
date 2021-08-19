@@ -1,0 +1,103 @@
+.app {
+  min-height: 311px;
+  background-image:
+    url("../img/qr-code.png"),
+    url("../img/app-desktop.jpg");
+  background-size: auto, cover;
+  background-position: top 50px right 40px, center;
+  background-repeat: no-repeat, no-repeat;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  text-align: left;
+  color: var(--basic-white);
+  padding-left: 260px;
+  padding-right: 20px;
+}
+
+.app__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 40px 0 10px 0;
+  margin: 0;
+}
+
+.app__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0 0 30px 0;
+  margin: 0;
+}
+
+.app__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__item {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0 0 10px 35px;
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 4px;
+    top: 7px;
+    left: 0;
+    background-image: url("../img/icon-dash.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.app__qr-code {
+  text-align: right;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 15px 0 0 0;
+  margin: 0;
+}
+
+@media (max-width: @desktop-width - 1px) {
+  .app {
+    background-size: 180px, cover;
+    background-position: top 70px right 40px, center;
+    padding-left: 28%;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .app {
+    min-height: 215px;
+    background-image:
+      url("../img/icon-app-store.png"),
+      url("../img/app-mobile.jpg");
+    background-size: auto, cover;
+    background-position: top 50px right 30px, center;
+    background-repeat: no-repeat, no-repeat;
+    border-radius: unset;
+    padding-left: 20px;
+  }
+
+  .app__title {
+    font-size: 18px;
+    line-height: 20px;
+    padding-top: 20px;
+  }
+
+  .app__list,
+  .app__qr-code {
+    display: none;
+  }
+}
+/////////////
