@@ -1,15 +1,17 @@
 .app {
   min-height: 311px;
-  background-image: url("../img/app-desktop.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image:
+    url("../img/qr-code.png"),
+    url("../img/app-desktop.jpg");
+  background-size: auto, cover;
+  background-position: top 50px right 40px, center;
+  background-repeat: no-repeat, no-repeat;
   border-radius: 8px;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
   text-align: left;
   color: var(--basic-white);
-  // padding-left: 260px;
+  padding-left: 260px;
   padding-right: 20px;
 }
 
@@ -66,4 +68,36 @@
   margin: 0;
 }
 
+@media (max-width: @desktop-width - 1px) {
+  .app {
+    background-size: 180px, cover;
+    background-position: top 70px right 40px, center;
+    padding-left: 28%;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .app {
+    min-height: 215px;
+    background-image:
+      url("../img/icon-app-store.png"),
+      url("../img/app-mobile.jpg");
+    background-size: auto, cover;
+    background-position: top 50px right 30px, center;
+    background-repeat: no-repeat, no-repeat;
+    border-radius: unset;
+    padding-left: 20px;
+  }
+
+  .app__title {
+    font-size: 18px;
+    line-height: 20px;
+    padding-top: 20px;
+  }
+
+  .app__list,
+  .app__qr-code {
+    display: none;
+  }
+}
 /////////////

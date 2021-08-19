@@ -4,10 +4,6 @@
   padding: 40px 43px 40px 20px;
 }
 
-.form--closed {
-  display: none;
-}
-
 .form__block1,
 .form__block2 {
   display: flex;
@@ -17,7 +13,8 @@
   margin-top: 10px;
 }
 
-.form__button {
+.form__label {
+  display: none;
   position: relative;
   font-weight: 400;
   font-size: 16px;
@@ -54,15 +51,6 @@
   &--administrative-case::before {
     background-image: url("../img/icon-administrative-case.svg");
   }
-
-  &:hover,
-  &:focus {
-    background-color: lightcoral;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
 }
 
 .form__input {
@@ -76,12 +64,15 @@
   border: 1px solid var(--special-grey-lighten);
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 0 20px;
   margin-bottom: 20px;
+
+  &--select {
+    margin-bottom: 0;
+  }
 
   &::placeholder {
     color: var(--special-black-medium);
-    padding: 0 10px;
   }
 
   &--name1,
@@ -109,48 +100,24 @@
 
 @media (max-width: @tablet-width) {
   .form {
-    padding-right: 20px;
-  }
-
-  .form--closed {
-    display: block;
-    padding: 0;
-  }
-
-  .form--closed .form__block1,
-  .form--closed .form__block2 {
-    display: none;
-  }
-
-  .form--closed .form__button {
-    width: 100%;
-    min-width: 320px;
-    min-height: 80px;
-    text-align: left;
-    border-radius: 8px;
-    pointer-events: visible;
-    padding-left: 90px;
-
-    &::before {
-      width: 40px;
-      height: 40px;
-      top: 20px;
-      left: 20px;
-    }
+    padding: 20px 20px 30px 20px;
   }
 
   .form__block1,
   .form__block2 {
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
+  }
+
+  .form__label {
+    display: block;
   }
 
   .form__input {
+    font-size: 13px;
     background-color: var(--special-green-opacity);
     border: none;
     box-sizing: border-box;
-    padding: 0;  // select не правильно реагирует на padding
 
     &--name1,
     &--name2,
@@ -159,6 +126,10 @@
       flex-grow: 0;
       margin-right: 0;
     }
+
+    &--select {
+      margin-bottom: 20px;
+    }
   }
 
   .form__button-submit {
@@ -166,6 +137,5 @@
     flex-grow: 0;
   }
 }
-
 
 ///////////

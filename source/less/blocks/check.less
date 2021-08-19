@@ -2,35 +2,54 @@
   padding: 0 0 20px 0;
 }
 
-.check--no-js {
-  & .check__wrapper {
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  & .check__buttons {
-    display: none;
-  }
-
-  & .check__form {
-    display: block;
-    box-shadow: 0 1px 10px var(--special-black-lighten);
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-
-  & .check__type {
-    display: block;
-  }
-}
-
 .check__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   box-shadow: 0 1px 10px var(--special-black-lighten);
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
-.check__type {
+.check__form-individual,
+.check__form-entity,
+.check__form-enforcement-proceeding,
+.check__form-administrative-case {
   display: none;
+  flex-basis: 100%;
+  border-radius: 8px;
+}
+
+.check__button1:checked ~ .check__form-individual,
+.check__button2:checked ~ .check__form-entity,
+.check__button3:checked ~ .check__form-enforcement-proceeding,
+.check__button4:checked ~ .check__form-administrative-case {
+  display: block;
+  flex-grow: 1;
+}
+
+.check__label {
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--special-blacken);
+  background-color: var(--basic-grey);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.check__wrapper > input[type="radio"]:checked + .check__label {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 .check__title {
@@ -41,59 +60,101 @@
   padding: 0 0 20px 0;
 }
 
-.check__buttons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: var(--basic-grey);
-  padding-right: 20px;
-}
-
-.check__button {
-  flex-basis: content;
-  flex-grow: 1;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: var(--special-grey-lighten);
-  background-color: var(--basic-grey);
-  padding: 10px 10px;
-
-  &--active {
-    color: var(--basic-black-lighten);
-    background-color: var(--basic-white);
-  }
-
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
-    color: var(--basic-black);
-    background-color: var(--basic-grey-lighen);
-  }
-
-  &:active:not(:disabled) {
-    opacity: 0.5;
-  }
-}
-
 @media (max-width: @tablet-width) {
+  .check {
+    padding: 0 20px;
+  }
+
   .check__wrapper {
     box-shadow: none;
     border-radius: 0;
   }
 
-  .check__buttons {
+  .check__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-basis: 100%;
+    min-height: 80px;
+    box-shadow: 0 1px 10px var(--special-black-lighten);
+    border-radius: 8px;
+    background-color: var(--basic-white);
+    padding: 0;
+    margin-bottom: 20px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--individual::before {
+      background-image: url("../img/icon-individual.svg");
+    }
+
+    &--entity::before {
+      background-image: url("../img/icon-entity.svg");
+    }
+
+    &--enforcement-proceeding::before {
+      background-image: url("../img/icon-enforcement-proceeding.svg");
+    }
+
+    &--administrative-case::before {
+      background-image: url("../img/icon-administrative-case.svg");
+    }
+  }
+
+  .form {
+    box-shadow: 0 1px 10px var(--special-black-lighten);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .check__form-individual {
+    order: 1;
+  }
+
+  .check__label--entity {
+    order: 3;
+  }
+
+  .check__label--enforcement-proceeding {
+    order: 5;
+  }
+
+  .check__label--administrative-case {
+    order: 7;
+  }
+
+  .check__button1:checked + .check__label,
+  .check__button2:checked + .check__label,
+  .check__button3:checked + .check__label,
+  .check__button4:checked + .check__label {
     display: none;
   }
 
-  .check__type {
-    display: block;
+  .check__button1:checked ~ .check__form-individual {
+    order: 2;
   }
 
-  .check__form {
-    // display: block;
-    box-shadow: 0 1px 10px var(--special-black-lighten);
-    border-radius: 10px;
-    margin-bottom: 20px;
+  .check__button2:checked ~ .check__form-entity {
+    order: 4;
+  }
+
+  .check__button3:checked ~ .check__form-enforcement-proceeding {
+    order: 6;
+  }
+
+  .check__button4:checked ~ .check__form-administrative-case {
+    order: 8;
   }
 }
 
