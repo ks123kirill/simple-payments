@@ -1,13 +1,14 @@
 .requisites {
   text-align: left;
-  outline: 5px solid red;
-  outline-offset: -5px;
+  padding-right: 15px;
 }
 
 .requisites__title {
-  .heading-text-medium;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 24px;
   color: var(--special-blacken);
-  padding: 0;
+  padding: 0 0 15px 0;
   margin: 0;
 }
 
@@ -18,7 +19,19 @@
 }
 
 .requisites__item {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+}
+
+@media (max-width: @tablet-width) {
+  .requisites {
+    text-align: center;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .requisites {
+    text-align: left;
+  }
 }

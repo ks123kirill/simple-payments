@@ -9,16 +9,15 @@
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 30px;
+  box-shadow: 0 4px 14px var(--special-black-lighten);
+  padding: 10px 30px 12px 28px;
   margin: 0 auto;
-  outline: 5px dotted tomato;
-  outline-offset: -5px;
 }
 
 .main-header__title {
   font-weight: 400;
-  font-size: 28px;
-  line-height: 35px;
+  font-size: 22px;
+  line-height: 27px;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -60,18 +59,23 @@
 }
 
 @media (max-width: @tablet-width) {
+  .main-header {
+    border-top: 5px solid var(--basic-green);
+  }
+
   .main-header__wrapper {
-    padding: 0 20px;
+    padding: 14px 20px 14px 20px;
   }
 
   .main-header__title {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 
   .main-header__logo {
     width: 47px;
     height: 52px;
+    margin-right: 10px;
   }
 
   .main-header__text {
@@ -87,5 +91,3 @@
     height: 25px;
   }
 }
-
-/////

@@ -1,7 +1,7 @@
 .form {
   text-align: left;
   box-sizing: border-box;
-  padding: 40px 43px 40px 20px;
+  padding: 20px 40px 40px 26px;
 }
 
 .form__block1,
@@ -57,7 +57,7 @@
   height: 64px;
   font-family: @font-family-basic;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 25px;
   color: var(--basic-black-lighten);
   background-color: var(--basic-white);
@@ -92,7 +92,7 @@
   flex-basis: 304px;
   flex-grow: 1;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 24px;
   height: 64px;
   border-radius: 8px;
@@ -101,6 +101,7 @@
 @media (max-width: @tablet-width) {
   .form {
     padding: 20px 20px 30px 20px;
+    margin-bottom: 10px;
   }
 
   .form__block1,
@@ -118,6 +119,7 @@
     background-color: var(--special-green-opacity);
     border: none;
     box-sizing: border-box;
+    margin-bottom: 10px;
 
     &--name1,
     &--name2,
@@ -135,6 +137,8 @@
   .form__button-submit {
     flex-basis: 50px;
     flex-grow: 0;
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 
