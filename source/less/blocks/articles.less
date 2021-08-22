@@ -2,8 +2,7 @@
   box-shadow: 0 1px 10px var(--special-black-lighten);
   border-radius: 10px;
   text-align: left;
-  padding: 20px 25px;
-  // margin-bottom: 15px;
+  padding: 20px 80px 45px 25px;
   box-sizing: border-box;
 }
 
@@ -56,11 +55,18 @@
 }
 
 .articles__link-all {
+  display: block;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   padding: 0;
-  margin: 0;
+  margin: 49px 0 0 0;
+}
+
+@media (max-width: @tablet-width) {
+  .articles {
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: @mobile-width) {

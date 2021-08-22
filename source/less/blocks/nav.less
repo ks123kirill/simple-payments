@@ -1,13 +1,14 @@
 .nav {
   text-align: left;
-  outline: 5px solid red;
-  outline-offset: -5px;
+  padding-right: 15px;
 }
 
 .nav__title {
-  .heading-text-medium;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 24px;
   color: var(--special-blacken);
-  padding: 0;
+  padding: 0 0 15px 0;
   margin: 0;
 }
 
@@ -19,7 +20,7 @@
 
 .nav__item {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
 }
 
@@ -27,3 +28,17 @@
   text-decoration: none;
   color: var(--special-blacken);
 }
+
+@media (max-width: @tablet-width) {
+  .nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .nav {
+    text-align: left;
+  }
+}
+
+///////////
