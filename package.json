@@ -30,7 +30,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp",
-    "deploy": "gulp build && gh-pages -d build"
+    "deploy": "gulp build && gulp-gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
@@ -48,5 +48,5 @@
   "engines": {
     "node": "14.15.0"
   },
-  "homepage": "https://ks123kirill.github.io/simple-payments"
+  "homepage": "https://ks123kirill.github.io/simple-payments/"
 }
