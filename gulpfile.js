@@ -13,7 +13,8 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
-const ghPages = require('gulp-gh-pages');
+const ghpages = require('gh-pages');
+
 
 // Styles
 
@@ -174,10 +175,7 @@ exports.build = build;
 
 // gh-pages
 
-gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
-});
+ghpages.publish('build', function(err) {});
 
 // Default
 
