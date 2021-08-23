@@ -1,5 +1,5 @@
 {
-  "name": "prostie-plateshi",
+  "name": "simple-payments",
   "private": true,
   "description": "Проверка и оплата задолженности ФССП РФ",
   "devDependencies": {
